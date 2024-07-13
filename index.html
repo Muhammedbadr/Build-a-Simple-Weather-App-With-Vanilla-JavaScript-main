@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Weather App</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/2682849_cloud_cloudy_day_forecast_sun_icon (1).png">
+
+  <!-- Reset -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
+  />
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    /* Custom styles for the box-weather class */
+    .box-weather {
+      transition: all 0.3s ease-in-out;
+    }
+    
+    .box-weather:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Custom styles for the weather icon */
+    .weather-icon {
+      border-radius: 50%;
+      padding: 10px;
+    }
+    
+    /* Animation for form message */
+    @keyframes fadeInOut {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+    
+    .form-msg {
+      animation: all .2s ease-in-out;
+    }
+  </style>
+</head>
+<body class="w-full h-screen bg-blue-950 bg-[url('/img/stars1.webp')] font-figtree">
+  <div class="container mx-auto px-4 py-16">
+    <header class="mb-14 text-center">
+      <h1 class="text-4xl font-bold text-white mb-4 " >Google Weather App</h1>
+      <form id="search-form" class="mt-4 flex flex-col items-center ">
+        <label for="search-term" class="block text-sm font-normal text-gray-200 mb-2 mr-56 w-full">Search the city or area</label>
+        <div class="flex items-center gap-2">
+          <input
+            type="text"
+            placeholder="e.g. Barcelona"
+            name="search-term"
+            id="search-term"
+            style="background: #000f42 url('/img/search.svg') .75rem center no-repeat; background-size: 20px;"
+            class="bg-transparent px-[50px] py-2 text-white border-b border-b-stone-50 focus:outline-none focus:border-b focus:border-b-stone-50 w-80 h-12 rounded-lg shadow-md"
+            autofocus
+          />
+          <button type="submit" class="h-12 w-12 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 focus:outline-none transition duration-300">
+            <img src="/img/plus-circle.svg" alt="" class="w-6 h-6" />
+          </button>
+        </div>
+        <p id="form-msg" class="hidden text-sm text-gray-300 bg-[#000d37] w-[50%] mt-4 px-4 py-2 rounded-sm mr-14" >
+        </p>
+      </form>
+    </header>
+    
+    <section class="mt-8">
+      <h2 class="text-3xl font-bold text-white mb-6 text-center">Weather Forecast</h2>
+      <ul class="cities grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
+        <!-- Add more city weather cards here -->
+      </ul>
+    </section>
+
+    <footer class="mt-12 text-center text-white">
+      <p class="text-sm">
+        <small>Design and code by <a href="https://www.adipurdila.com/" class="text-blue-400 hover:underline">Adi Purdila</a> and <a href="https://georgemartsoukos.com/" class="text-blue-400 hover:underline">George Martsoukos</a>.</small>
+      </p>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

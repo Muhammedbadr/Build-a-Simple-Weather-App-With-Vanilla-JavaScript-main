@@ -1,0 +1,46 @@
+/* ================================================= */
+/* Custom properties */
+/* ================================================= */
+:root {
+	--body-font: 'Figtree', sans-serif;
+
+	--p-shade-80: #050B12;
+	--p-shade-50: #0e1b2d;
+	--p-shade-30: #13263e;
+	--p-shade-20: #162b47;
+	--primary: #1b3659;
+	--p-tint-40: #76869b;
+	--p-tint-90: #e8ebee;
+	--secondary: #EFA00B;
+	--tertiary: rgba(209, 209, 209, 0.8);
+
+	--global-border-radius: 4px;
+	--global-transition: all .2s ease-in-out;
+}
+
+
+
+/* ============================================================ */
+/* General styles */
+/* ============================================================ */
+html {
+	font-size: 16px;
+}
+
+body {
+	font-family: var(--body-font);
+	background-color: var(--primary);
+	color: var(--p-tint-90);
+	background-image: url("/img/images.jpeg");
+}
+
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
